@@ -1,6 +1,5 @@
+flask
 pandas
-numpy
 scikit-learn
-spacy
-scispacy
-reportlab
+numpy
+gunicorn
