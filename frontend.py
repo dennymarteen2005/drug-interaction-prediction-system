@@ -40,8 +40,9 @@ if st.button("🔍 Predict Interaction"):
                 response = requests.post(
                     BACKEND_URL,
                     json={"text": user_input},
-                    timeout=20
+                    timeout=60
                 )
+
 
                 if response.status_code == 200:
                     result = response.json()
