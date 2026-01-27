@@ -23,8 +23,8 @@ def resource_path(relative_path):
 with open(resource_path("model/interaction_model.pkl"), "rb") as f:
     model, vectorizer, label_encoder = pickle.load(f)
 
-interaction_df = pd.read_csv(resource_path("data/drug_interactions.csv"))
-recommendation_df = pd.read_csv(resource_path("data/drug_recommendations.csv"))
+interaction_df = pd.read_csv(resource_path("backend/data/drug_interactions.csv"))
+recommendation_df = pd.read_csv(resource_path("backend/data/drug_recommendations.csv"))
 
 all_drugs = interaction_df["drug1"].tolist() + interaction_df["drug2"].tolist()
 

@@ -10,8 +10,8 @@ with open("model/interaction_model.pkl", "rb") as f:
     model, vectorizer, label_encoder = pickle.load(f)
 
 # ========== LOAD DATA ==========
-interaction_df = pd.read_csv("data/drug_interactions.csv")
-recommendation_df = pd.read_csv("data/drug_recommendations.csv")
+interaction_df = pd.read_csv(r"backend/data/drug_interactions.csv")
+recommendation_df = pd.read_csv(r"backend/data/drug_recommendations.csv")
 
 # ========== DRUG LIST ==========
 drug_list = list(

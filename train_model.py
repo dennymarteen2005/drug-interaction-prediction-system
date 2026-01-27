@@ -1,5 +1,6 @@
 import pandas as pd
 import pickle
+import os
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import LabelEncoder
@@ -7,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
 
 # Load dataset
-df = pd.read_csv("data/drug_interactions.csv")
+df = pd.read_csv(r"backend/data/drug_interactions.csv")
 
 # Create drug pair text
 df["pair"] = df["drug1"] + " " + df["drug2"]
@@ -38,6 +39,7 @@ print(classification_report(y_test, y_pred))
 
 
 # Save model
+os.makedirs("model", exist_ok=True)
 with open("model/interaction_model.pkl", "wb") as f:
     pickle.dump((model, vectorizer, le), f)
 
