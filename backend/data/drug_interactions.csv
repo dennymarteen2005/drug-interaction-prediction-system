@@ -1,39 +1,107 @@
-drug1,drug2,severity
-paracetamol,ibuprofen,mild
-paracetamol,aspirin,mild
-paracetamol,vitamin c,mild
-vitamin c,paracetamol,mild
-paracetamol,amoxicillin,mild
-amoxicillin,paracetamol,mild
-omeprazole,paracetamol,mild
-paracetamol,omeprazole,mild
+drug1,drug2,severity,interaction_description
+warfarin,aspirin,severe,Increases bleeding risk due to anticoagulant synergy
+warfarin,clopidogrel,severe,Strong increase in bleeding tendency
+warfarin,heparin,severe,High risk of uncontrolled bleeding
+warfarin,diclofenac,severe,NSAID enhances anticoagulant effect
+warfarin,ibuprofen,severe,Major bleeding risk reported
+warfarin,naproxen,severe,Severe gastrointestinal bleeding risk
+warfarin,fluconazole,severe,Inhibits metabolism causing toxicity
+warfarin,metronidazole,severe,Strong warfarin potentiation
+warfarin,amiodarone,severe,Warfarin concentration increases dangerously
+warfarin,erythromycin,severe,Inhibits metabolism increasing INR
 
-ibuprofen,aspirin,moderate
-aspirin,ibuprofen,moderate
-ibuprofen,prednisone,moderate
-prednisone,ibuprofen,moderate
-diclofenac,ibuprofen,moderate
-ibuprofen,diclofenac,moderate
-naproxen,aspirin,moderate
-aspirin,naproxen,moderate
-amlodipine,atenolol,moderate
-atenolol,amlodipine,moderate
-metformin,insulin,moderate
-insulin,metformin,moderate
-metformin,glimepiride,moderate
-glimepiride,metformin,moderate
-losartan,amlodipine,moderate
-amlodipine,losartan,moderate
-ciprofloxacin,prednisone,moderate
-prednisone,ciprofloxacin,moderate
+aspirin,clopidogrel,severe,Dual antiplatelet effect increases bleeding
+aspirin,warfarin,severe,Severe anticoagulation interaction
+aspirin,prednisone,moderate,Gastrointestinal bleeding risk increases
+aspirin,ibuprofen,moderate,Competes for platelet binding
+aspirin,naproxen,moderate,Increases gastric irritation
+aspirin,metformin,mild,Minimal pharmacokinetic interaction
+aspirin,vitamin c,mild,No clinically significant interaction
 
-warfarin,aspirin,severe
-aspirin,warfarin,severe
-warfarin,clopidogrel,severe
-clopidogrel,warfarin,severe
-warfarin,heparin,severe
-heparin,warfarin,severe
-clopidogrel,aspirin,severe
-aspirin,clopidogrel,severe
-warfarin,diclofenac,severe
-diclofenac,warfarin,severe
+ibuprofen,prednisone,moderate,Increases GI ulcer risk
+ibuprofen,diclofenac,moderate,Combined NSAIDs increase toxicity
+ibuprofen,naproxen,moderate,Additive NSAID effects
+ibuprofen,amlodipine,mild,May slightly reduce antihypertensive effect
+ibuprofen,losartan,mild,Minor reduction in BP control
+
+paracetamol,ibuprofen,mild,Generally safe combination
+paracetamol,vitamin c,mild,No harmful interaction reported
+paracetamol,omeprazole,mild,Safe co-administration
+paracetamol,amoxicillin,mild,No major interaction
+paracetamol,metformin,mild,Minimal interaction
+
+metformin,insulin,moderate,Risk of hypoglycemia increases
+metformin,glimepiride,moderate,Additive glucose lowering
+metformin,ciprofloxacin,moderate,May alter blood glucose control
+metformin,vitamin b12,mild,Long term metformin may reduce B12 absorption
+
+losartan,amlodipine,moderate,Additive BP lowering effect
+losartan,ibuprofen,mild,NSAIDs may reduce antihypertensive action
+losartan,spironolactone,moderate,Risk of hyperkalemia increases
+
+atenolol,amlodipine,moderate,Additive cardiac suppression
+atenolol,verapamil,severe,Bradycardia risk increases
+atenolol,diltiazem,severe,Serious conduction abnormalities possible
+
+ciprofloxacin,prednisone,moderate,Increased tendon rupture risk
+ciprofloxacin,warfarin,severe,Increases anticoagulant effect
+ciprofloxacin,metformin,moderate,May alter glucose regulation
+ciprofloxacin,theophylline,severe,Toxic levels of theophylline possible
+
+fluconazole,warfarin,severe,Inhibits metabolism causing bleeding
+fluconazole,phenytoin,severe,Phenytoin toxicity risk increases
+fluconazole,omeprazole,moderate,Enzyme inhibition interaction
+
+amoxicillin,warfarin,moderate,May enhance anticoagulant effect
+amoxicillin,metformin,mild,No serious interaction reported
+amoxicillin,paracetamol,mild,Safe combination
+
+prednisone,ibuprofen,moderate,Gastrointestinal damage risk increases
+prednisone,aspirin,moderate,Peptic ulcer risk rises
+prednisone,metformin,mild,May slightly increase glucose levels
+
+naproxen,warfarin,severe,Bleeding risk increases sharply
+naproxen,aspirin,moderate,Additive NSAID effects
+naproxen,losartan,mild,May slightly reduce BP control
+
+diclofenac,warfarin,severe,Serious bleeding risk
+diclofenac,ibuprofen,moderate,NSAID toxicity risk
+diclofenac,metformin,mild,Minimal interaction
+
+omeprazole,clopidogrel,moderate,May reduce antiplatelet activation
+omeprazole,warfarin,moderate,May increase anticoagulant effect
+omeprazole,vitamin b12,mild,Long-term absorption reduction
+
+clopidogrel,warfarin,severe,High bleeding risk
+clopidogrel,omeprazole,moderate,Reduced antiplatelet activation
+clopidogrel,aspirin,severe,Dual therapy increases bleeding risk
+
+insulin,glimepiride,severe,Severe hypoglycemia risk
+insulin,metformin,moderate,Additive glucose lowering
+insulin,prednisone,moderate,Prednisone may increase glucose
+
+spironolactone,losartan,moderate,Hyperkalemia risk increases
+spironolactone,atenolol,mild,Minimal interaction
+
+verapamil,atenolol,severe,Heart block risk
+verapamil,statins,moderate,Increases statin concentration
+
+diltiazem,atenolol,severe,Serious cardiac suppression
+diltiazem,simvastatin,moderate,Increases statin levels
+
+simvastatin,erythromycin,severe,Rhabdomyolysis risk increases
+simvastatin,verapamil,moderate,Statin toxicity risk rises
+simvastatin,grapefruit juice,moderate,Inhibits statin metabolism
+
+phenytoin,fluconazole,severe,Phenytoin toxicity risk
+phenytoin,warfarin,moderate,Complex metabolism interaction
+
+theophylline,ciprofloxacin,severe,Toxic accumulation possible
+theophylline,erythromycin,moderate,Metabolism inhibition
+
+erythromycin,warfarin,severe,Strong anticoagulant increase
+erythromycin,simvastatin,severe,Rhabdomyolysis risk
+erythromycin,theophylline,moderate,Increases concentration
+
+vitamin c,paracetamol,mild,No major clinical interaction
+vitamin b12,metformin,mild,Absorption reduced long term
